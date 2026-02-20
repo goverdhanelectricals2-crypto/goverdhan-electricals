@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Goverdhan Electricals | Industrial Electrical Panels, Switchgears & Tower Lights Ahmedabad</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+
+:root{
+--primary:#0f172a;
+--accent:#16a34a;
+--accent-soft:#22c55e;
+--text:#1f2937;
+--light:#f8fafc;
+--border:#e5e7eb;
+}
+
+body{background:var(--light);color:var(--text);overflow-x:hidden;}
+
+header{background:#fff;padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999;border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.05);} 
+.header-right{display:flex;align-items:center;gap:18px;}
+.header-contact{font-size:13px;color:var(--accent);font-weight:600;}
+.since-badge{background:var(--accent);color:#fff;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-left:10px;}
+header h1{color:var(--primary);font-size:22px;margin:0;}
+.brand-box{display:flex;flex-direction:column;line-height:1.2;}
+.brand-tag{font-size:12px;color:#6b7280;margin-top:2px;}
+nav{display:flex;align-items:center;gap:24px;}
+nav a{color:var(--primary);text-decoration:none;font-weight:600;}
+nav a:hover{color:var(--accent);} 
+
+/* DROPDOWN MENU */
+.dropdown{position:relative;}
+.dropdown-content{display:none;position:absolute;background:#fff;min-width:260px;top:34px;left:0;border:1px solid var(--border);border-radius:8px;box-shadow:0 10px 20px rgba(0,0,0,0.08);}
+.dropdown.active .dropdown-content{display:block;}
+.dropdown-content a{display:block;padding:12px 16px;color:var(--primary);border-bottom:1px solid var(--border);} 
+.dropdown-content a:hover{background:#f1f5f9;color:var(--accent);} 
+
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px;background:linear-gradient(180deg,#ffffff,#f1f5f9);} 
+.hero h2{font-size:48px;color:var(--primary);} 
+.hero p{max-width:800px;margin:20px 0;font-size:18px;line-height:1.7;color:#475569;} 
+
+.btn{background:var(--accent);color:#fff;padding:16px 34px;text-decoration:none;border-radius:6px;font-weight:600;transition:.3s;} 
+.btn:hover{background:var(--accent-soft);transform:translateY(-2px);} 
+
+.counter{display:flex;justify-content:center;gap:70px;padding:60px 20px;background:#fff;flex-wrap:wrap;text-align:center;border-top:1px solid var(--border);} 
+.counter h3{font-size:42px;color:var(--accent);} 
+.counter p{color:#64748b;} 
+
+.section{padding:100px 30px;max-width:1200px;margin:auto;} 
+.section h2{text-align:center;color:var(--primary);margin-bottom:20px;font-size:34px;} 
+.section p.center{text-align:center;max-width:900px;margin:0 auto 40px;color:#64748b;} 
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;} 
+.card{
+background:#ffffff;
+border-radius:16px;
+border:1px solid var(--border);
+overflow:hidden;
+text-align:left;
+transition:all .35s ease;
+position:relative;
+padding-bottom:10px;
+}
+
+/* ULTRA PRO INDUSTRIAL CARD IMAGE */
+.card img{
+width:100%;
+height:220px;
+object-fit:contain;
+padding:22px;
+background:linear-gradient(180deg,#ffffff,#f8fafc);
+border-bottom:1px solid var(--border);
+display:block;
+}
+
+/* ULTRA PRO TITLE STYLE */
+.card h4{
+padding:16px 18px 8px;
+color:var(--primary);
+font-weight:700;
+font-size:18px;
+line-height:1.4;
+}
+
+/* INDUSTRIAL SPECIFICATION STYLE */
+.card p{
+padding:0 18px 20px;
+font-size:15px;
+color:#334155;
+font-weight:600;
+line-height:1.8;
+}
+
+/* PREMIUM INDUSTRIAL HOVER EFFECT */
+.card:hover{
+transform:translateY(-10px) scale(1.01);
+box-shadow:0 18px 35px rgba(0,0,0,0.12);
+border-color:#cbd5f5;
+}
+
+/* ULTRA PRO INDUSTRIAL THEME FOR ALL PRODUCT CARDS */
+#products .card{
+border-top:4px solid var(--accent);
+box-shadow:0 8px 18px rgba(22,163,74,0.12);
+} 
+
+.trust{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:30px;} 
+.badge{background:#fff;padding:14px 22px;border:1px solid var(--border);border-radius:6px;font-weight:600;color:var(--accent);} 
+
+/* ULTRA PRO BRANDS SECTION STYLE */
+#brands .card{
+position:relative;
+border-top:4px solid var(--accent);
+background:#ffffff;
+transition:all .35s ease;
+}
+#brands .card img{
+height:110px;
+object-fit:contain;
+padding:22px;
+background:#f8fafc;
+border-bottom:1px solid var(--border);
+}
+#brands .card h4{
+font-weight:700;
+margin-top:6px;
+}
+#brands .card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 18px 35px rgba(0,0,0,0.12);
+border-top-color:var(--accent-soft);
+}
+
+/* BRAND COLOR ACCENTS */
+#brands .card:nth-child(1){border-top-color:#22c55e;} /* Schneider */
+#brands .card:nth-child(2){border-top-color:#00a3ff;} /* Siemens */
+#brands .card:nth-child(3){border-top-color:#ef4444;} /* ABB */
+#brands .card:nth-child(4){border-top-color:#f97316;} /* Phoenix */
+#brands .card:nth-child(5){border-top-color:#38bdf8;} /* Meanwell */
+#brands .card:nth-child(6){border-top-color:#facc15;} /* RR Kabel */
+#brands .card:nth-child(7){border-top-color:#a855f7;} /* Rexnord */
+#brands .card:nth-child(8){border-top-color:#f59e0b;} /* L&T */
+#brands .card:nth-child(9){border-top-color:#16a34a;} /* Elmex */
+
+/* ABOUT SECTION (PRO) */
+.about-box{
+background:#ffffff;
+border:1px solid var(--border);
+padding:35px;
+border-radius:14px;
+line-height:1.8;
+color:#475569;
+box-shadow:0 8px 18px rgba(0,0,0,0.04);
+} 
+
+.contact-strip{background:var(--accent);color:#fff;text-align:center;padding:50px;font-weight:700;font-size:22px;} 
+footer{background:#fff;text-align:center;padding:25px;margin-top:40px;font-size:14px;border-top:1px solid var(--border);} 
+
+/* QUICK INQUIRY THEME STYLE (UPDATED) */
+.form{max-width:720px;margin:40px auto 0;display:flex;flex-direction:column;gap:18px;}
+.form input,.form textarea{padding:16px;border-radius:8px;border:1px solid var(--border);background:#ffffff;color:var(--text);font-size:15px;outline:none;}
+.form input::placeholder,.form textarea::placeholder{color:#94a3b8;}
+.form button{background:var(--accent);color:#fff;border:none;padding:16px;border-radius:8px;font-weight:600;cursor:pointer;box-shadow:0 6px 14px rgba(22,163,74,0.25);transition:.3s;}
+.form button:hover{background:var(--accent-soft);transform:translateY(-2px);}    
+
+.whatsapp,.callbtn{position:fixed;right:25px;padding:14px 20px;border-radius:40px;text-decoration:none;font-weight:600;color:white;} 
+.whatsapp{bottom:25px;background:#25D366;} 
+.callbtn{bottom:85px;background:var(--accent);} 
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="brand-box">
+<h1>Goverdhan Electricals <span class="since-badge">Since 2007</span></h1>
+<div class="brand-tag">Industrial Electrical Manufacturer & Supplier</div>
+</div>
+
+<div class="header-right">
+<div class="header-contact">📞 8200293600</div>
+<nav>
+<a href="#">Home</a>
+
+<div class="dropdown" id="productsMenu">
+<a href="#" id="productsBtn">Products ▾</a>
+<div class="dropdown-content">
+<a href="towerlight56.html">Premium Tower Light – 56mm</a>
+<a href="slick-towerlight.html">Slick Tower Light – 40mm</a>
+<a href="conduit-gland.html">Conduit Gland</a>
+<a href="conduit-pipe.html">Conduit Pipe</a>
+<a href="swr-pipe.html">S.W.R. Pipe</a>
+<a href="pvc-end-fitting.html">PVC End Fitting</a>
+<a href="control-panel-accessories.html">Panel Accessories</a>
+</div>
+</div>
+
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<h2>Industrial Electrical Panels, Switchgears & Tower Lights Ahmedabad</h2>
+<p>Goverdhan Electricals is a trusted manufacturer & supplier of industrial electrical panels, switchgears and tower lights. Established in 2007 — serving industries with quality and trust.</p>
+<a class="btn" href="https://wa.me/918200293600" target="_blank">Get Instant Quote</a>
+</section>
+
+<div class="counter">
+<div><h3 class="count" data-target="19">0</h3><p>Years Experience</p></div>
+<div><h3 class="count" data-target="500">0</h3><p>Products Available</p></div>
+<div><h3 class="count" data-target="1000">0</h3><p>Industrial Clients</p></div>
+</div>
+
+<!-- INDUSTRIAL BRANDS WE DEAL IN (PRO SECTION ADDED) -->
+<section class="section" id="brands">
+<h2>Industrial Brands We Deal In</h2>
+<p class="center">Click on any brand to explore full industrial product catalogue and switchgear range available at Goverdhan Electricals.</p>
+
+<div class="grid">
+
+<a href="schneider.html" class="card">
+<img src="schneider-logo.png" alt="Schneider Electric">
+<h4>Schneider Electric</h4>
+<p>Industrial Switchgear & Automation Range</p>
+</a>
+
+<a href="siemens.html" class="card">
+<img src="siemens-logo.png" alt="Siemens">
+<h4>Siemens</h4>
+<p>Industrial Control & Protection Devices</p>
+</a>
+
+<a href="abb.html" class="card">
+<img src="abb-logo.png" alt="ABB">
+<h4>ABB</h4>
+<p>Industrial Automation & Electrical Solutions</p>
+</a>
+
+<a href="phoenix.html" class="card">
+<img src="phoenix-logo.png" alt="Phoenix Contact">
+<h4>Phoenix Contact</h4>
+<p>Terminal Blocks & Interface Modules</p>
+</a>
+
+<a href="meanwell.html" class="card">
+<img src="meanwell-logo.png" alt="Mean Well">
+<h4>Mean Well</h4>
+<p>Industrial SMPS Power Supply</p>
+</a>
+
+<a href="rrkabel.html" class="card">
+<img src="rrkabel-logo.png" alt="RR Kabel">
+<h4>RR Kabel</h4>
+<p>Industrial Cable & Wiring Solutions</p>
+</a>
+
+<a href="rexnord.html" class="card">
+<img src="rexnord-logo.png" alt="Rexnord">
+<h4>Rexnord</h4>
+<p>Industrial Components & Accessories</p>
+</a>
+
+<a href="lnt.html" class="card">
+<img src="lnt-logo.png" alt="L&T Switchgears">
+<h4>L&T Switchgears</h4>
+<p>Electrical Distribution & Control</p>
+</a>
+
+<a href="elmex.html" class="card">
+<img src="elmex-logo.png" alt="Elmex">
+<h4>Elmex</h4>
+<p>Terminal Blocks & Interface Products</p>
+</a>
+
+</div>
+</section>
+
+<section class="section" id="products">
+<h2>Our Industrial Products</h2>
+<p class="center">Professional industrial electrical product range available at Goverdhan Electricals.</p>
+<div class="grid">
+
+<a href="towerlight56.html" class="card">
+<img src="56mm-1stage.jpg">
+<h4>Premium Tower Light – 56mm Dia | Goverdhan Make</h4>
+<p>
+✔ Available in 1 Stage / 2 Stage / 3 Stage / 4 Stage / 5 Stage Models<br>
+✔ 56mm Diameter Industrial LED Tower Lights<br>
+✔ Voltage Options: 12V/24V AC-DC | 110V/230V AC<br>
+✔ High Intensity LED | CE Certified | 1 Year Replacement Warranty<br>
+✔ Click to View Full Tower Light Catalogue
+</p>
+</a>
+
+<a href="slick-towerlight.html" class="card">
+<img src="red-1-stage.png">
+<h4>Slick Tower Light – 40mm Dia | Goverdhan Make</h4>
+<p>
+✔ Available in 1 Stage / 2 Stage / 3 Stage / 4 Stage / 5 Stage Models<br>
+✔ 40mm Diameter Industrial LED Tower Lights<br>
+✔ Voltage Options: 12V/24V AC-DC | 110V/230V AC<br>
+✔ High Intensity LED | CE Certified | 1 Year Replacement Warranty<br>
+✔ Click to View Full Tower Light Catalogue
+</p>
+</a>
+
+<div class="card">
+<img src="conduit-gland.jpg">
+<h4>Conduit Gland</h4>
+<p>
+✔ P.G.-07 TO P.G.-48 Sizes Available<br>
+✔ Conduit Pipe Grip<br>
+✔ Strong Cable Grip & Sealing Protection<br>
+✔ Suitable for Electrical Panels & Junction Boxes<br>
+✔ Click to View Full Conduit Gland Catalogue
+</p>
+</div>
+
+<div class="card">
+<img src="conduit-pipe.jpg">
+<h4>Conduit Pipe</h4>
+<p>
+✔ Size Range: P.G.-07 to P.G.-48<br>
+✔ Black Colour Industrial Conduit Pipes<br>
+✔ Flexible & Durable Construction<br>
+✔ Ideal for Panel Wiring Protection<br>
+✔ Heat & Oil Resistant Material<br>
+✔ Click to View Full Conduit Pipe Catalogue
+</p>
+</div>
+
+<div class="card">
+<img src="swr-pipe.jpg">
+<h4>Steel Wire Reinforced Pipe (S.W.R.)</h4>
+<p>
+✔ Available Sizes: 10MM / 15MM / 20MM / 25MM / 30MM / 40MM<br>
+✔ 50MM / 60MM / 75MM / 100MM / 125MM / 150MM / 200MM / 250MM / 300MM<br>
+✔ Heavy Duty Steel Wire Reinforced Structure<br>
+✔ High Mechanical Strength<br>
+✔ Industrial Cable Protection Solution<br>
+✔ Click to View Full S.W.R. Pipe Catalogue
+</p>
+</div>
+
+<div class="card">
+<img src="pvc-end-fitting.jpg">
+<h4>P.V.C. End Fitting for S.W.R. Pipe</h4>
+<p>
+✔ P.G.-07 TO P.G.-48 Sizes Available<br>
+✔ Industrial Grade PVC End Fittings<br>
+✔ Click to View Full PVC End Fitting Catalogue
+</p>
+</div>
+
+<div class="card">
+<img src="panel-accessories.jpg">
+<h4>Electrical Control Panel Accessories</h4>
+<p>
+✔ Wide Range of Industrial Panel Accessories<br>
+✔ Reliable Electrical Panel Components<br>
+✔ Suitable for OEM & Automation Panels<br>
+✔ High Quality Industrial Standards<br>
+✔ Click to View Full Panel Accessories Catalogue
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- SLOW MOVING INDUSTRIAL BRAND STRIP (PRO) -->
+<div style="overflow:hidden;background:#0f172a;color:#fff;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
+  <div style="display:flex;width:200%;animation:brandmove 18s linear infinite;font-weight:600;">
+    <div style="min-width:16%;padding:20px;text-align:center;">Schneider Electric</div>
+    <div style="min-width:16%;padding:20px;text-align:center;">Siemens</div>
+    <div style="min-width:16%;padding:20px;text-align:center;">Phoenix Contact</div>
+    <div style="min-width:16%;padding:20px;text-align:center;">Mean Well</div>
+    <div style="min-width:16%;padding:20px;text-align:center;">RR Kabel</div>
+    <div style="min-width:16%;padding:20px;text-align:center;">L&T Switchgear</div>
+    <div style="min-width:16%;padding:20px;text-align:center;">Elmex</div>
+    <div style="min-width:16%;padding:20px;text-align:center;">Schneider Electric</div>
+  </div>
+</div>
+
+<style>
+@keyframes brandmove{
+0%{transform:translateX(0);} 
+100%{transform:translateX(-50%);} 
+}
+</style>
+
+<!-- ABOUT GOVERDHAN ELECTRICALS (PRO SECTION) -->
+<section class="section" id="about">
+<h2>About Goverdhan Electricals</h2>
+<div class="about-box">
+<p>Goverdhan Electricals is a leading industrial electrical supplier and panel manufacturer based in Ahmedabad, Gujarat. Since 2007, we have been delivering reliable electrical automation products to industries across India. Our focus is on quality products, competitive pricing and long‑term business relationships.</p>
+<p>We specialize in switchgears, control panels, SMPS power supplies, signalling tower lights and industrial electrical accessories. With strong technical knowledge and industry experience, we help businesses build efficient and safe electrical systems.</p>
+</div>
+</section>
+
+<!-- WHY CHOOSE GOVERDHAN ELECTRICALS (PRO SECTION) -->
+<section class="section" id="why">
+<h2>Why Choose Goverdhan Electricals</h2>
+<p class="center">We focus on industrial reliability, genuine brands and long‑term business relationships. Our experience in electrical panels and automation products helps industries run smoothly and safely.</p>
+
+<div class="grid">
+
+<div class="card">
+<h4>⚡ Industrial Expertise</h4>
+<p>Strong experience in switchgears, panels and automation components used by machine builders and industries.</p>
+</div>
+
+<div class="card">
+<h4>💰 Competitive Pricing</h4>
+<p>Best market pricing with genuine branded electrical products and reliable sourcing network.</p>
+</div>
+
+<div class="card">
+<h4>🚚 Fast Response</h4>
+<p>Quick quotation support and technical assistance for urgent industrial requirements.</p>
+</div>
+
+<div class="card">
+<h4>🛠 Quality Manufacturing</h4>
+<p>Control panels manufactured with proper design standards and industrial safety focus.</p>
+</div>
+
+</div>
+</section>
+
+<!-- INDUSTRIES WE SERVE (PRO SECTION ADDED) -->
+<section class="section" id="industries">
+<h2>Industries We Serve</h2>
+<p class="center">Our electrical products and panel solutions are widely used across different industrial sectors.</p>
+
+<div class="grid">
+
+<div class="card"><h4>Textile Industries</h4></div>
+<div class="card"><h4>Pharma & Chemical Plants</h4></div>
+<div class="card"><h4>Machine Builders</h4></div>
+<div class="card"><h4>Packaging Industries</h4></div>
+<div class="card"><h4>Automation Integrators</h4></div>
+<div class="card"><h4>OEM Panel Builders</h4></div>
+
+</div>
+</section>
+
+<!-- VISIT GOVERDHAN ELECTRICALS LOCATION (PRO SECTION) -->
+<section class="section" id="location">
+<h2>Visit Goverdhan Electricals – Ahmedabad</h2>
+<p class="center">Connect with us for industrial electrical panels, switchgears and automation products. Our Ahmedabad location helps us serve industries quickly with fast support and delivery.</p>
+
+<div class="grid">
+
+<div class="card" style="text-align:left;padding:25px;">
+<h4 style="color:var(--accent);">📍 Goverdhan Electricals</h4>
+<p>106, Yamuna Estate, Nr. Sakriba Party Plot,<br>C.T.M., Ahmedabad – 380026, Gujarat, India</p>
+<p>Ph: (079) 25854789<br>Mobile: 8200293600 / 09825457134</p>
+<p>Industrial Electrical Panels & Automation Products Supplier</p>
+
+<div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;">
+<a class="btn" href="https://maps.google.com/?q=Goverdhan+Electricals+Ahmedabad" target="_blank">Get Directions</a>
+<a class="btn" href="tel:8200293600">Call Now</a>
+</div>
+
+<div style="margin-top:18px;color:#64748b;font-size:14px;">
+✔ Easy Industrial Access Location<br>
+✔ Fast Local Delivery Support<br>
+✔ Trusted Ahmedabad Electrical Supplier
+</div>
+</div>
+
+<div class="card" style="padding:25px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+<h4 style="color:var(--accent);">🧭 Navigate Easily</h4>
+<p style="max-width:260px;">Open our business location directly in Google Maps and get instant navigation to Goverdhan Electricals.</p>
+<a class="btn" style="margin-top:20px;" href="https://maps.google.com/?q=Goverdhan+Electricals+Ahmedabad" target="_blank">Open Google Maps</a>
+</div>
+
+</div>
+</section>
+
+<!-- CALL NOW STRIP (PRO SECTION ADDED) -->
+<div class="contact-strip">
+📞 Call Now: 8200293600 | 📧 goverdhanelectricals@yahoo.com
+</div>
+
+<section class="section" id="contact">
+<h2>Quick Inquiry (Auto WhatsApp Lead)</h2>
+<form class="form" onsubmit="sendLead(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+<textarea id="msg" placeholder="Your Requirement"></textarea>
+<button type="submit">Send on WhatsApp</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 Goverdhan Electricals | Industrial Electrical Solutions Ahmedabad</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918200293600" target="_blank">WhatsApp</a>
+<a class="callbtn" href="tel:8200293600">Call</a>
+
+<script>
+
+/* COUNTER */
+const counters=document.querySelectorAll('.count');
+counters.forEach(counter=>{
+let update=()=>{
+const target=+counter.getAttribute('data-target');
+const c=+counter.innerText;
+const inc=target/100;
+if(c<target){counter.innerText=Math.ceil(c+inc);setTimeout(update,20);}else{counter.innerText=target;}
+};update();});
+
+/* WHATSAPP FORM */
+function sendLead(e){
+e.preventDefault();
+let name=document.getElementById('name').value;
+let mobile=document.getElementById('mobile').value;
+let msg=document.getElementById('msg').value;
+let text=`Hello Goverdhan Electricals,%0AMy Name: ${name}%0AMobile: ${mobile}%0ARequirement: ${msg}`;
+window.open(`https://wa.me/918200293600?text=${text}`,'_blank');
+}
+
+/* PRODUCTS DROPDOWN CLICK ONLY */
+const productsBtn=document.getElementById('productsBtn');
+const productsMenu=document.getElementById('productsMenu');
+
+productsBtn.addEventListener('click',function(e){
+e.preventDefault();
+e.stopPropagation();
+productsMenu.classList.toggle('active');
+});
+
+document.addEventListener('click',function(e){
+if(!productsMenu.contains(e.target)){
+productsMenu.classList.remove('active');
+}
+});
+
+</script>
+
+</body>
+</html>
